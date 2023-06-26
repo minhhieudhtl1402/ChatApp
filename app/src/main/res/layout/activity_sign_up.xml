@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/act_sign_up"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:clipToPadding="false"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/text_bold"
+                android:text="@string/join_funchat"
+                android:textColor="@color/primary_text"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_join"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_outline"
+                android:bottomLeftRadius="20dip"
+                android:bottomRightRadius="20dip"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/join"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_join" />
+
+            <TextView
+                android:id="@+id/tv_join_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/text_regular"
+                android:text="Create an account to connect with friends,family and communities of people who share your interest"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_join" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/text_bold"
+                android:text="Get started"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_join_description" />
+
+            <TextView
+                android:id="@+id/tv_already_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/text_bold"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/secondary_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="@dimen/_12sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</layout>

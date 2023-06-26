@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:padding="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_btn_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/text_bold"
+            android:text="What's your user name?"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/text_regular"
+            android:text="Enter the name you use in real life"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question" />
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/background"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:defaultFocusHighlightEnabled="false"
+                android:hint="Username"
+                app:boxBackgroundColor="@color/text_input_box_color"
+                app:boxStrokeErrorColor="@color/text_input_error"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:errorIconTint="@color/error"
+                app:errorTextColor="@color/error"
+                app:hintTextColor="@color/hint_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/edittext_background"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/text_bold"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_input" />
+
+
+        <TextView
+            android:id="@+id/tv_already_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/text_bold"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

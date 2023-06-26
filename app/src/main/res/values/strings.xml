@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="join_funchat">Join FunChat</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="next">Next</string>
+    <string name="first_name">First name</string>
+    <string name="user_name_empty">Username cannot be empty</string>
+    <string name="short_username"><![CDATA[This username is too short(must >=6 letters)]]></string>
+    <string name="empty_password">Password cannot be empty</string>
+    <string name="short_password"><![CDATA[This password is too short(must >=6 letters)]]></string>
+</resources>

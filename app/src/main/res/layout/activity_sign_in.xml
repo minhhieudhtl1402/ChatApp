@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:padding="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_back_to_main"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_btn_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/text_bold"
+            android:text="English(US)"
+            android:textColor="@color/secondary_text"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_language" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_username"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="60dp"
+            android:defaultFocusHighlightEnabled="false"
+            android:hint="Mobile number or email"
+            app:boxBackgroundColor="@color/text_input_box_color"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_background"
+                android:defaultFocusHighlightEnabled="false"
+                android:inputType="text"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/primary_text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:defaultFocusHighlightEnabled="false"
+            android:hint="Password"
+            app:boxBackgroundColor="@color/text_input_box_color"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edittext_background"
+                android:defaultFocusHighlightEnabled="false"
+                android:inputType="textPassword"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/primary_text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/text_bold"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_password" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/text_bold"
+            android:text="Forgot password?"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_new_account"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_background3"
+            android:fontFamily="@font/text_bold"
+            android:text="Create new account"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
