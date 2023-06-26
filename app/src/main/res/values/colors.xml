@@ -11,4 +11,6 @@
     <color name="text_input_box_color">#1c2a33</color>
     <color name="text_input_error">#ed606b</color>
     <color name="warning">#D89025</color>
+    <color name="grey">#4a4e69</color>
+    <color name="white">#FFFFFF</color>
 </resources>

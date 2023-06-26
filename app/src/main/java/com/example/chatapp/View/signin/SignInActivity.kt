@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.chatapp.R
+import com.example.chatapp.View.chat.ChatActivity
 import com.example.chatapp.View.signup.SignUpActivity
 import com.example.chatapp.databinding.ActivitySignInBinding
 
@@ -14,6 +15,11 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
 
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent()
+            intent.setClass(this, ChatActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnCreateNewAccount.setOnClickListener {
             val intent = Intent()
             intent.setClass(this, SignUpActivity::class.java)
