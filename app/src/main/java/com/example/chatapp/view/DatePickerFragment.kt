@@ -1,4 +1,4 @@
-package com.example.chatapp.View
+package com.example.chatapp.view
 
 import android.app.DatePickerDialog
 import android.app.Dialog

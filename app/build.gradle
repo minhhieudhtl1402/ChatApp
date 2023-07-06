@@ -33,7 +33,7 @@ android {
     }
     dataBinding
             {
-                enabled=true
+               android.buildFeatures.dataBinding=true
             }
 }
 

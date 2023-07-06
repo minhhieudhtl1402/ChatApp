@@ -14,19 +14,19 @@
         android:theme="@style/Theme.ChatApp"
         tools:targetApi="31">
         <activity
-            android:name=".View.signin.SignInActivity"
-
+            android:name=".view.signin.SignInActivity"
+            android:exported="true"
             android:windowSoftInputMode="adjustResize">
 
-
-        </activity>
-        <activity android:name=".View.signup.SignUpActivity" />
-        <activity android:name=".View.chat.ChatActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
+        </activity>
+        <activity android:name=".view.signup.SignUpActivity" />
+        <activity android:name=".view.chat.ChatActivity"
+            >
+
         </activity>
     </application>
 
