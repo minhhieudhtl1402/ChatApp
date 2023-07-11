@@ -13,7 +13,7 @@
             android:id="@+id/btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/bg_btn_arrow_back"
+            android:background="@drawable/ll_arrow_back_trans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +24,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/text_bold"
             android:text="What's your birthday?"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_back" />
@@ -42,6 +42,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
         <DatePicker
+            android:background="@color/white"
             android:id="@+id/dp_birthday"
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -57,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/bg_button_light_blue"
             android:fontFamily="@font/text_bold"
             android:text="@string/next"
             android:textAllCaps="false"

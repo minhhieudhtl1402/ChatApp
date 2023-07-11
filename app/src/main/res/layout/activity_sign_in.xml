@@ -13,7 +13,7 @@
             android:id="@+id/btn_back_to_main"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/bg_btn_arrow_back"
+            android:background="@drawable/ll_arrow_back_trans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +28,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_back" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/iv_logo"
@@ -42,15 +42,23 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:elevation="4dp"
             android:id="@+id/til_username"
+            app:boxStrokeColor="@color/secondary_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:defaultFocusHighlightEnabled="false"
             android:hint="Mobile number or email"
-            app:boxBackgroundColor="@color/text_input_box_color"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:endIconMode="clear_text"
-            app:hintTextColor="@color/hint_color"
+            app:hintTextColor="@color/secondary_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_logo">
 
@@ -58,7 +66,6 @@
                 android:id="@+id/tiet_username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/edittext_background"
                 android:defaultFocusHighlightEnabled="false"
                 android:inputType="text"
                 android:textColor="@color/primary_text"
@@ -68,15 +75,23 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:elevation="4dp"
+            app:boxStrokeColor="@color/secondary_text"
             android:id="@+id/til_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:defaultFocusHighlightEnabled="false"
             android:hint="Password"
-            app:boxBackgroundColor="@color/text_input_box_color"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp"
             app:endIconMode="password_toggle"
-            app:hintTextColor="@color/hint_color"
+            app:hintTextColor="@color/secondary_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_username">
 
@@ -84,7 +99,6 @@
                 android:id="@+id/tiet_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/edittext_background"
                 android:defaultFocusHighlightEnabled="false"
                 android:inputType="textPassword"
                 android:textColor="@color/primary_text"
@@ -93,15 +107,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:elevation="4dp"
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/bg_button_light_blue"
             android:fontFamily="@font/text_bold"
             android:text="Login"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +129,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/text_bold"
             android:text="Forgot password?"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/white"
             android:textSize="@dimen/_12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -124,12 +139,12 @@
             android:id="@+id/btn_create_new_account"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/button_background3"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_button_dark_blue_blue_stroke_rounded"
             android:fontFamily="@font/text_bold"
             android:text="Create new account"
             android:textAllCaps="false"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

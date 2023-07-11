@@ -1,5 +1,6 @@
 package com.example.chatapp.view.signup
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,13 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.chatapp.R
 import com.example.chatapp.databinding.FragmentSignUpUserNameBinding
+import java.net.URI
 
 
 class SignUpUserNameFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentSignUpUserNameBinding
-
-
     private lateinit var username: String
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,7 +25,6 @@ class SignUpUserNameFragment : Fragment(), View.OnClickListener {
         binding.tietUsername.setOnClickListener(this)
         binding.btnBack.setOnClickListener(this)
         binding.tvAlreadyHaveAccount.setOnClickListener(this)
-
         return binding.root
     }
 
@@ -74,6 +74,10 @@ class SignUpUserNameFragment : Fragment(), View.OnClickListener {
         }
         return true
     }
+
+
+
+
 
 
 }

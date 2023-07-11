@@ -13,7 +13,7 @@
             android:id="@+id/btn_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/bg_btn_arrow_back"
+            android:background="@drawable/ll_arrow_back_trans"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +70,7 @@
                     android:id="@+id/tiet_username"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/edittext_background"
+                    android:background="@drawable/bg_edt"
                     android:defaultFocusHighlightEnabled="false"
                     android:textColor="@color/primary_text"
                     android:textColorHint="@color/primary_text" />
@@ -85,7 +85,7 @@
             android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/button_background"
+            android:background="@drawable/bg_button_light_blue"
             android:fontFamily="@font/text_bold"
             android:text="@string/next"
             android:textAllCaps="false"

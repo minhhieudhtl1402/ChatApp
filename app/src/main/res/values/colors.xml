@@ -3,7 +3,7 @@
     <color name="primary">#1C2E46</color>
     <color name="background">#10222e</color>
     <color name="icon_background">#FFFFFF</color>
-    <color name="primary_text">#FFFFFF</color>
+    <color name="primary_text">#000000</color>
     <color name="secondary_text">#50a3ed</color>
     <color name="button_background">#0064e0</color>
     <color name="error">#ed5f68</color>
@@ -13,4 +13,5 @@
     <color name="warning">#D89025</color>
     <color name="grey">#4a4e69</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

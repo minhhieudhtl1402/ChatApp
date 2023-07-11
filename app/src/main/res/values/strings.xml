@@ -8,4 +8,10 @@
     <string name="short_username"><![CDATA[This username is too short(must >=6 letters)]]></string>
     <string name="empty_password">Password cannot be empty</string>
     <string name="short_password"><![CDATA[This password is too short(must >=6 letters)]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_title_chat">Chats</string>
+    <string name="fragment_title_feeds">Feeds</string>
+    <string name="fragment_title_people">People</string>
+    <string name="fragment_title_stories">Stories</string>
 </resources>
