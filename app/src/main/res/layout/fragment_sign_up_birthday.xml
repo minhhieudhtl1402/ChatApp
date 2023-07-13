@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="@drawable/main_background"
         android:clipToPadding="false"
         android:padding="24dp">
 
@@ -22,9 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/text_bold"
+            style="@style/TextStyle"
             android:text="What's your birthday?"
-            android:textColor="@color/white"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_back" />
@@ -34,15 +33,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/text_regular"
+            style="@style/TextStyle.Regular"
             android:text="Choose your date of birth.You can always make this private later."
-            android:textColor="@color/primary_text"
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
         <DatePicker
-            android:background="@color/white"
+            android:background="@drawable/main_background"
             android:id="@+id/dp_birthday"
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -58,12 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/bg_button_light_blue"
-            android:fontFamily="@font/text_bold"
+            style="@style/ButtonStyle"
             android:text="@string/next"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_text"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dp_birthday" />
@@ -75,8 +69,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/text_bold"
             android:text="@string/already_have_an_account"
-            android:textColor="@color/secondary_text"
-            android:textSize="@dimen/_12sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

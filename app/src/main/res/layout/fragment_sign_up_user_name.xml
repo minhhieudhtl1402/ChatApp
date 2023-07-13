@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="@drawable/main_background"
         android:clipToPadding="false"
         android:padding="24dp">
 
@@ -37,43 +37,39 @@
             android:fontFamily="@font/text_regular"
             android:text="Enter the name you use in real life"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_12sp"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
         <LinearLayout
             android:id="@+id/ll_input"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@color/background"
+            android:layout_height="90dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_enter">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_username"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:defaultFocusHighlightEnabled="false"
                 android:hint="Username"
-                app:boxBackgroundColor="@color/text_input_box_color"
                 app:boxStrokeErrorColor="@color/text_input_error"
                 app:endIconMode="clear_text"
                 app:errorEnabled="true"
                 app:errorIconTint="@color/error"
-                app:errorTextColor="@color/error"
-                app:hintTextColor="@color/hint_color">
+                app:errorTextColor="@color/error">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tiet_username"
+                    style="@style/TextInputEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:background="@drawable/bg_edt"
-                    android:defaultFocusHighlightEnabled="false"
-                    android:textColor="@color/primary_text"
-                    android:textColorHint="@color/primary_text" />
+                    android:layout_height="match_parent"
+                    android:defaultFocusHighlightEnabled="false" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,13 +79,10 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/bg_button_light_blue"
-            android:fontFamily="@font/text_bold"
             android:text="@string/next"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +95,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/text_bold"
             android:text="@string/already_have_an_account"
-            android:textColor="@color/secondary_text"
-            android:textSize="@dimen/_12sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

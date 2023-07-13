@@ -5,17 +5,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="@drawable/main_background"
         android:clipToPadding="false"
         android:padding="24dp">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_back_to_main"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ll_arrow_back_trans"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_language"
@@ -24,7 +17,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/text_bold"
             android:text="English(US)"
-            android:textColor="@color/secondary_text"
+            android:textColor="@color/grey"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,82 +35,59 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:elevation="4dp"
             android:id="@+id/til_username"
-            app:boxStrokeColor="@color/secondary_text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:defaultFocusHighlightEnabled="false"
             android:hint="Mobile number or email"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="@color/white"
-            app:boxCornerRadiusBottomEnd="24dp"
-            app:boxCornerRadiusBottomStart="24dp"
-            app:boxCornerRadiusTopEnd="24dp"
-            app:boxCornerRadiusTopStart="24dp"
             app:endIconMode="clear_text"
-            app:hintTextColor="@color/secondary_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_logo">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_username"
+                style="@style/TextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:defaultFocusHighlightEnabled="false"
-                android:inputType="text"
-                android:textColor="@color/primary_text"
-                android:textColorHint="@color/primary_text" />
+                android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:elevation="4dp"
-            app:boxStrokeColor="@color/secondary_text"
             android:id="@+id/til_password"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            style="@style/TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:defaultFocusHighlightEnabled="false"
             android:hint="Password"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="@color/white"
-            app:boxCornerRadiusBottomEnd="24dp"
-            app:boxCornerRadiusBottomStart="24dp"
-            app:boxCornerRadiusTopEnd="24dp"
-            app:boxCornerRadiusTopStart="24dp"
             app:endIconMode="password_toggle"
-            app:hintTextColor="@color/secondary_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_password"
+                style="@style/TextInputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:defaultFocusHighlightEnabled="false"
                 android:inputType="textPassword"
-                android:textColor="@color/primary_text"
-                android:textColorHint="@color/primary_text" />
+                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:elevation="4dp"
             android:id="@+id/btn_login"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/bg_button_light_blue"
-            android:fontFamily="@font/text_bold"
+            android:elevation="4dp"
             android:text="Login"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_password" />
@@ -129,8 +99,8 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/text_bold"
             android:text="Forgot password?"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_login" />
@@ -144,7 +114,7 @@
             android:fontFamily="@font/text_bold"
             android:text="Create new account"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

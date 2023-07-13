@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
+        android:background="@drawable/main_background"
         android:clipToPadding="false"
         android:padding="24dp">
 
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/text_regular"
+            android:fontFamily="@font/text_bold"
             android:text="Register Successfully!"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_14sp"
@@ -55,12 +55,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/bg_button_light_blue"
             android:fontFamily="@font/text_bold"
             android:text="Go to sign in"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_text"
             android:textSize="16sp"
+            style="@style/ButtonStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_join_description" />
