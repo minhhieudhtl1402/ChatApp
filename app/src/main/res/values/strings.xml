@@ -14,4 +14,5 @@
     <string name="fragment_title_feeds">Feeds</string>
     <string name="fragment_title_people">People</string>
     <string name="fragment_title_stories">Stories</string>
+    <string name="exist_username">This username is already exist</string>
 </resources>

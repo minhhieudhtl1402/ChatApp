@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="signUpViewModel"
+            type="com.example.chatapp.viewmodel.SignUpViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,10 +26,10 @@
 
         <TextView
             android:id="@+id/tv_question"
+            style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            style="@style/TextStyle"
             android:text="What's your birthday?"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,33 +37,33 @@
 
         <TextView
             android:id="@+id/tv_choose"
+            style="@style/TextStyle.Regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            style="@style/TextStyle.Regular"
             android:text="Choose your date of birth.You can always make this private later."
             android:textSize="@dimen/_12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_question" />
 
+
         <DatePicker
-            android:background="@drawable/main_background"
             android:id="@+id/dp_birthday"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@drawable/main_background"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_choose" />
 
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
-            style="@style/ButtonStyle"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

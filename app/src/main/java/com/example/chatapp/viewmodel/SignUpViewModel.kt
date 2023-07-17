@@ -1,44 +1,66 @@
 package com.example.chatapp.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.chatapp.model.Birthday
+import com.example.chatapp.model.Gender
+import com.example.chatapp.model.response.AccountResponse
+import com.example.chatapp.service.RetrofitUtils
+import com.example.chatapp.service.SignUpApi
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 class SignUpViewModel : ViewModel() {
-    private lateinit var usernameLiveData: MutableLiveData<String>
-    private lateinit var passwordLiveData: MutableLiveData<String>
-    private lateinit var birthdayLiveData: MutableLiveData<String>
-    private lateinit var genderLiveData: MutableLiveData<String>
 
-    init {
-        usernameLiveData.value = ""
-        passwordLiveData.value = ""
-        birthdayLiveData.value = ""
-        genderLiveData.value = ""
+    val signUpApi = RetrofitUtils.createRetrofit(RetrofitUtils.BASE_API, SignUpApi::class.java)
+
+    private var username: MutableLiveData<String> = MutableLiveData("")
+    private var password: MutableLiveData<String> = MutableLiveData("")
+    private var gender: MutableLiveData<Gender> = MutableLiveData(Gender.other)
+    private var birthday: MutableLiveData<Birthday> = MutableLiveData(Birthday(1, 1, 2001))
+
+
+    private var usernameStatus: MutableLiveData<Int> = MutableLiveData()
+
+    val usernameStatusLive: LiveData<Int> = usernameStatus
+    val signInStatusLive: MutableLiveData<Int> = MutableLiveData()
+    val usernameLive: LiveData<String> = username
+    val passwordLive: LiveData<String> = password
+    val genderLive: LiveData<Gender> = gender
+    val birthdayLive: LiveData<Birthday> = birthday
+
+
+    fun setName(name: String) {
+        username.value = name
     }
 
-    public fun getUsername(): String {
-        return usernameLiveData.value.toString()
+    fun setGender(gender: Gender) {
+        this.gender.value = gender
     }
 
-    public fun getPassword(): String {
-        return passwordLiveData.value.toString()
+    fun setBirthday(birthday: Birthday) {
+        this.birthday.value = birthday
     }
 
-    public fun getBirthday(): String {
-        return birthdayLiveData.value.toString()
+    fun setPassword(password: String) {
+        this.password.value = password
     }
 
-    public fun getGender(): String {
-        return genderLiveData.value.toString()
+    fun checkAccountExist(username: String) {
+        signUpApi.checkAccountExist(username).subscribeOn(Schedulers.newThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+                usernameStatus.value=it.status
+            }, {})
     }
 
-    public fun setUsername(name: String) {
-        usernameLiveData.value = name
+    fun signUp(username: String, password: String) {
+        signUpApi.signUp(username, password).subscribeOn(Schedulers.newThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({
+            signInStatusLive.value=it.status
+            }, {})
     }
-
-    public fun setPassword(password: String) {
-        passwordLiveData.value = password
-    }
-
 
 }

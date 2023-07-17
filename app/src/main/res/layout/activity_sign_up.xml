@@ -3,11 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+    <variable
+        name="signUpViewModel"
+        type="com.example.chatapp.viewmodel.SignUpViewModel" />
+    </data>
+
     <FrameLayout
-        android:layout_width="match_parent"
         android:id="@+id/act_sign_up"
-        android:layout_height="match_parent"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,10 +62,10 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_get_started"
+                style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
-                style="@style/ButtonStyle"
                 android:text="Get started"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,10 +78,10 @@
                 android:fontFamily="@font/text_bold"
                 android:text="@string/already_have_an_account"
                 android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textSize="@dimen/_12sp"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
