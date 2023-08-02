@@ -49,7 +49,6 @@ class SignUpBirthdayFragment : Fragment(), View.OnClickListener {
         val day=signUpViewModel.birthdayLive.value!!.day
         val month=signUpViewModel.birthdayLive.value!!.month
         val year=signUpViewModel.birthdayLive.value!!.year
-//        Toast.makeText(requireActivity()," $day + $month + $year",Toast.LENGTH_SHORT).show()
 
         binding.dpBirthday.updateDate(year,month,day)
     }

@@ -32,11 +32,6 @@ class SignUpGenderFragment : Fragment(), View.OnClickListener {
         binding.btnNext.setOnClickListener(this)
         binding.rgGender.setOnCheckedChangeListener { group, checkedId ->
             update(checkedId)
-//            Toast.makeText(
-//                requireActivity(),
-//                "Gender : ${signUpViewModel.genderLive.value?.name}",
-//                Toast.LENGTH_SHORT
-//            ).show()
         }
 
         signUpViewModel.genderLive.observe(viewLifecycleOwner, Observer {
@@ -98,17 +93,6 @@ class SignUpGenderFragment : Fragment(), View.OnClickListener {
                 moveToSignUpPasswordFragment()
             }
 
-//            binding.radioMale.id -> {
-//                signUpViewModel.setGender(Gender.male)
-//            }
-//
-//            binding.radioFemale.id -> {
-//                signUpViewModel.setGender(Gender.female)
-//            }
-//
-//            binding.radioMoreOption.id -> {
-//                signUpViewModel.setGender(Gender.other)
-//            }
         }
     }
 

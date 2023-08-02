@@ -2,7 +2,7 @@
 <resources>
     <color name="primary">#000000</color>
     <color name="primary_text">#000000</color>
-    <color name="secondary_text">#50a3ed</color>
+    <color name="secondary_text">#07355D</color>
     <color name="button_background">#0064e0</color>
     <color name="error">#ed5f68</color>
     <color name="text_input_error">#ed606b</color>
@@ -11,4 +11,6 @@
     <color name="main_start_color">#FFFFFF</color>
     <color name="main_end_color">#78B1E9</color>
     <color name="grey">#9BA4B5</color>
+    <color name="trans">#00000000</color>
+    <color name="main_bg">#EFF6F9</color>
 </resources>

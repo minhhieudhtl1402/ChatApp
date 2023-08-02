@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/main_background"
+        android:background="@color/main_bg"
         android:clipToPadding="false"
         android:padding="24dp">
 
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/text_bold"
-            android:text="Welcome to FunChat"
+            android:text="Welcome to X"
             android:textColor="@color/primary_text"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,8 @@
             android:fontFamily="@font/text_bold"
             android:text="Register Successfully!"
             android:textColor="@color/primary_text"
-            android:textSize="@dimen/_14sp"
+            android:paddingVertical="10dp"
+            android:textSize="@dimen/_22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_join" />
@@ -57,7 +58,6 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/text_bold"
             android:text="Go to sign in"
-            android:textSize="16sp"
             style="@style/ButtonStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

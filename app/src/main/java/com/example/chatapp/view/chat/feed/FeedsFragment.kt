@@ -1,20 +1,20 @@
-package com.example.chatapp.view.chat
+package com.example.chatapp.view.chat.feed
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.chatapp.databinding.FragmentChatBinding
+import com.example.chatapp.databinding.FragmentFeedsBinding
 
-class ChatFragment: Fragment() {
-    private lateinit var binding:FragmentChatBinding
+class FeedsFragment : Fragment() {
+    private lateinit var binding: FragmentFeedsBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentChatBinding.inflate(inflater,container,false)
+        binding = FragmentFeedsBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

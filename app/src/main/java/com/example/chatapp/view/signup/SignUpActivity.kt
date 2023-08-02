@@ -50,5 +50,9 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+
 
 }

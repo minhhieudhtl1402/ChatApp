@@ -7,17 +7,16 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/x"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp"
         tools:targetApi="31">
         <activity
             android:name=".view.signin.SignInActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
@@ -25,10 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.signup.SignUpActivity" />
-        <activity android:name=".view.chat.ChatActivity"
-            >
+        <activity android:name=".view.chat.ChatActivity">
 
         </activity>
+        <activity android:name=".view.chat.chatdetail.ChatDetailActivity" />
     </application>
 
 </manifest>

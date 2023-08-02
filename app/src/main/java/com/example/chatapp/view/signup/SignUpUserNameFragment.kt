@@ -11,7 +11,6 @@ import com.example.chatapp.R
 import com.example.chatapp.databinding.FragmentSignUpUserNameBinding
 import com.example.chatapp.model.response.AccountResponse
 import com.example.chatapp.viewmodel.SignUpViewModel
-import kotlin.math.sign
 
 
 class SignUpUserNameFragment : Fragment(), View.OnClickListener {
@@ -22,7 +21,7 @@ class SignUpUserNameFragment : Fragment(), View.OnClickListener {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSignUpUserNameBinding.inflate(inflater, container, false)
         signUpViewModel = ViewModelProvider(requireActivity()).get(SignUpViewModel::class.java)
         binding.signUpViewModel = signUpViewModel
@@ -80,12 +79,12 @@ class SignUpUserNameFragment : Fragment(), View.OnClickListener {
         username = binding.tietUsername.text.toString()
         var isExist = false
         signUpViewModel.checkAccountExist(username)
-        signUpViewModel.usernameStatusLive.observe(viewLifecycleOwner, Observer {
+        signUpViewModel.usernameStatusLive.observe(viewLifecycleOwner) {
             when (it) {
                 AccountResponse.ACCOUNT_IS_EXIST -> isExist = true
                 AccountResponse.ACCOUNT_IS_NOT_EXIST -> isExist = false
             }
-        })
+        }
 
         if ("".equals(username)) {
             binding.tilUsername.error = getString(R.string.user_name_empty)

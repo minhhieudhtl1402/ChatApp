@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">ChatApp</string>
-    <string name="join_funchat">Join FunChat</string>
+    <string name="app_name">X</string>
+    <string name="join_x">Join X</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="next">Next</string>
     <string name="first_name">First name</string>
@@ -15,4 +15,5 @@
     <string name="fragment_title_people">People</string>
     <string name="fragment_title_stories">Stories</string>
     <string name="exist_username">This username is already exist</string>
+    <string name="login">Login</string>
 </resources>

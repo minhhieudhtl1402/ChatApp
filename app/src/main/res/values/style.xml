@@ -6,9 +6,10 @@
         <item name="android:fontFamily">@font/text_bold</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:background">@drawable/bg_button_light_blue</item>
     </style>
+
     <style name="ButtonStyle.WhiteBackground">
         <item name="android:elevation">4dp</item>
         <item name="android:fontFamily">@font/text_bold</item>
@@ -17,24 +18,34 @@
         <item name="android:textSize">16sp</item>
         <item name="android:background">@drawable/bg_button_dark_blue_blue_stroke_rounded</item>
     </style>
+
     <style name="TextStyle">
         <item name="android:fontFamily">@font/text_bold</item>
         <item name="android:textColor">@color/black</item>
-    </style><style name="TextStyle.Regular">
+    </style>
+
+    <style name="TextStyle.Regular">
         <item name="android:fontFamily">@font/text_regular</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="TextStyle.ItemChatVertical">
+        <item name="android:fontFamily">@font/monolog</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="elevation">4dp</item>
-        <item name="android:textColorHint">@color/grey</item>
-        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:textColorHint">@color/main_start_color</item>
+        <item name="boxBackgroundColor">@color/grey</item>
         <item name="boxCornerRadiusBottomEnd">24dp</item>
         <item name="boxCornerRadiusBottomStart">24dp</item>
         <item name="boxCornerRadiusTopEnd">24dp</item>
         <item name="boxCornerRadiusTopStart">24dp</item>
-        <item name="boxStrokeColor">@color/secondary_text</item>
-        <item name="hintTextColor">@color/grey</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="hintTextColor">@color/secondary_text</item>
     </style>
+
     <style name="TextInputEditText">
         <item name="android:textColor">@color/black</item>
         <item name="android:textColorHint">@color/black</item>
